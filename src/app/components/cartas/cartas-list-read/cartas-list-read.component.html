@@ -1,0 +1,59 @@
+<mat-card>
+
+  <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)"
+    class="mat-elevation-z8">
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="image">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by image">
+        Image
+      </th>
+      <td mat-cell *matCellDef="let carta"> <img src="{{carta.imageLink}}" class="card-cover" alt="Card Photo"> </td>
+    </ng-container>
+
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name">
+        Name
+      </th>
+      <td mat-cell *matCellDef="let carta"> {{carta.name}} </td>
+    </ng-container>
+
+    <!-- Edition Column -->
+    <ng-container matColumnDef="edition">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by edition">
+        Edition
+      </th>
+      <td mat-cell *matCellDef="let carta"> {{carta.edition}} </td>
+    </ng-container>
+
+    <!-- Card-type Column -->
+    <ng-container matColumnDef="cardType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by cardType">
+        CardType
+      </th>
+      <td mat-cell *matCellDef="let carta"> {{carta.cardType}} </td>
+    </ng-container>
+
+
+    <!-- Type Column -->
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by type">
+        Type
+      </th>
+      <td mat-cell *matCellDef="let carta"> {{carta.type}} </td>
+    </ng-container>
+
+    <!-- Attribute Column -->
+    <ng-container matColumnDef="attribute">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by attribute">
+        Attribute
+      </th>
+      <td mat-cell *matCellDef="let carta"> {{carta.attribute}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</mat-card>

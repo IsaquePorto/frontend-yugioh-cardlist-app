@@ -1,0 +1,15 @@
+<h1 class="title">CARD SETS</h1>
+<ul class="content" style="list-style: none;">
+    <li *ngFor="let edition of editions">
+        <a onMouseOver="this.style.cursor='pointer'" (click)="escolheuEdicao(edition.initial)">
+            <mat-card class="card">
+                <mat-card-header>
+                    <mat-card-title>{{ edition.name }}</mat-card-title>
+                    <mat-card-subtitle>{{ edition.initial }}</mat-card-subtitle>
+                </mat-card-header>
+                <img src="assets/Cartas/Covers/{{edition.initial}}-Booster.png" alt="Card Photo" height="444"
+                    width="257">
+            </mat-card>
+        </a>
+    </li>
+</ul>

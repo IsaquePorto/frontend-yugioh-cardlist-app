@@ -1,0 +1,95 @@
+<mat-card>
+    <mat-card-title>Nova Carta</mat-card-title>
+    <form action="">
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Ex. Blue-eyes White Dragon" [(ngModel)]="carta.name" name="name">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Type</mat-label>
+            <mat-select [(value)]="carta.type">
+                <mat-option value="aqua">Aqua</mat-option>
+                <mat-option value="beast">Beast</mat-option>
+                <mat-option value="beast-warrior">Beast-Warrior</mat-option>
+                <mat-option value="dinosaur">Dinosaur</mat-option>
+                <mat-option value="divine-beast">Divine-Beast</mat-option>
+                <mat-option value="dragon">Dragon</mat-option>
+                <mat-option value="fairy">Fairy</mat-option>
+                <mat-option value="fiend">Fiend</mat-option>
+                <mat-option value="fish">Fish</mat-option>
+                <mat-option value="insect">Insect</mat-option>
+                <mat-option value="machine">Machine</mat-option>
+                <mat-option value="plant">Plant</mat-option>
+                <mat-option value="pyro">Pyro</mat-option>
+                <mat-option value="reptile">Reptile</mat-option>
+                <mat-option value="rock">Rock</mat-option>
+                <mat-option value="sea serpent">Sea Serpent</mat-option>
+                <mat-option value="spellcaster">Spellcaster</mat-option>
+                <mat-option value="thunder">Thunder</mat-option>
+                <mat-option value="warrior">Warrior</mat-option>
+                <mat-option value="winged beast">Winged Beast</mat-option>
+                <mat-option value="zombie">Zombie</mat-option>
+                <mat-option value="spell">Spell</mat-option>
+                <mat-option value="trap">Trap</mat-option>
+            </mat-select>
+            <mat-hint align="end">Ex. Dragon</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Card Type</mat-label>
+            <mat-select [(value)]="carta.cardType">
+                <mat-option value="monster-normal">Normal Monster</mat-option>
+                <mat-option value="monster-effect">Effect Monster</mat-option>
+                <mat-option value="monster-ritual">Ritual Monster</mat-option>
+                <mat-option value="monster-fusion">Fusion Monster</mat-option>
+                <mat-option value="spell">Spell</mat-option>
+                <mat-option value="trap">Trap</mat-option>
+            </mat-select>
+            <mat-hint align="end">Ex. Monster Normal</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Attribute</mat-label>
+            <mat-select [(value)] = "carta.attribute">
+                <mat-option value="dark">DARK</mat-option>
+                <mat-option value="earth">EARTH</mat-option>
+                <mat-option value="fire">FIRE</mat-option>
+                <mat-option value="light">LIGHT</mat-option>
+                <mat-option value="water">WATER</mat-option>
+                <mat-option value="wind">WIND</mat-option>
+                <mat-option value="divine">DIVINE</mat-option>
+                <mat-option value="spell">SPELL</mat-option>
+                <mat-option value="trap">TRAP</mat-option>
+            </mat-select>
+            <mat-hint align="end">Ex. Light</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Edition</mat-label>
+            <mat-select [(value)]="carta.edition">
+                <mat-option value="lob">LOB</mat-option>
+                <mat-option value="mrd">MRD</mat-option>
+                <mat-option value="mrl">MRL</mat-option>
+                <mat-option value="psv">PSV</mat-option>
+                <mat-option value="lon">LON</mat-option>
+                <mat-option value="pgd">PGD</mat-option>
+                <mat-option value="mfc">MFC</mat-option>
+                <mat-option value="dcr">DCR</mat-option>
+                <mat-option value="ioc">IOC</mat-option>
+                <mat-option value="ast">AST</mat-option>
+                <mat-option value="sod">SOD</mat-option>
+                <mat-option value="lod">LOD</mat-option>
+                <mat-option value="rds">RDS</mat-option>
+            </mat-select>
+            <mat-hint align="end">Ex. PSV</mat-hint>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="createProduct()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()" color="danger">
+        Cancelar
+    </button>
+</mat-card>

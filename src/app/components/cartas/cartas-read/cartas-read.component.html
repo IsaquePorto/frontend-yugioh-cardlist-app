@@ -1,0 +1,12 @@
+<h1 class="title">CARD GALLERY</h1>
+<ul class="content" style="list-style: none;">
+    <li *ngFor="let carta of cartas">
+        <mat-card class="card">
+            <mat-card-header>
+                <mat-card-title>{{ carta.name }}</mat-card-title>
+                <mat-card-subtitle>{{ carta.edition }}</mat-card-subtitle>
+            </mat-card-header>
+            <img [src]="carta.imageLink" alt="Card Photo" height="375" width="257">
+        </mat-card>
+    </li>
+</ul>

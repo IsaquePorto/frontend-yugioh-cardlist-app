@@ -1,0 +1,13 @@
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.card-cover{
+  margin: 5px;
+  height: 100px;
+  width: 68px;
+}

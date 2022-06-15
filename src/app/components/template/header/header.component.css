@@ -1,0 +1,46 @@
+.header {
+    width: 100%;
+    background-image: url(C:\Users\isaqu\Pictures\BackGrounds\bg-header.png);
+    position: relative;
+    max-height: 110px;
+    min-height: 110px;
+}
+
+.header .logo {
+    max-height: 120px;
+    padding-left: 40px;
+    padding-top: 40px;
+}
+
+#nav {
+    position: relative;
+    display: table;
+    float: left;
+    width: 100%;
+}
+
+#nav ul {
+    position: relative;
+    display: table;
+    padding-top: 30px;
+    border-right: 1px solid #070707;
+    width: 90%;
+    text-transform: uppercase;
+    font: 16px/20px 'league_gothicregular', Arial, Helvetica, sans-serif;
+}
+
+#nav li {
+    display: table-cell;
+    text-align: center;
+}
+
+#nav li a {
+    text-decoration: none !important;
+    height: 140px;
+    display: block;
+    cursor: pointer;
+    color: #cacacb;
+    border-left: 1px solid #070707;
+    padding-top: 80px;
+
+}

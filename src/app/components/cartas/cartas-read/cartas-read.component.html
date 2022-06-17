@@ -1,6 +1,7 @@
 <h1 class="title">CARD GALLERY</h1>
+
 <ul class="content" style="list-style: none;">
-    <li *ngFor="let carta of cartas">
+    <li *ngFor="let carta of cartas" >
         <mat-card class="card">
             <mat-card-header>
                 <mat-card-title>{{ carta.name }}</mat-card-title>
@@ -10,3 +11,7 @@
         </mat-card>
     </li>
 </ul>
+
+<mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+    (page)="pageEvent = $event; mudarPagina();" aria-label="Select page">
+</mat-paginator>

@@ -1,4 +1,19 @@
-<mat-card>
+<div class="imagem">
+    <img src="assets/Cartas/Jinzo.png" alt="" srcset="">
+    <ul>
+        <li>
+            Name: Jinzo
+        </li>
+        <li>
+            Type: Machine
+        </li>
+        <li>
+            Card Type: Effect Monster
+        </li>
+    </ul>
+</div>
+
+<mat-card class="create">
     <mat-card-title>Nova Carta</mat-card-title>
     <form action="">
         <mat-form-field appearance="fill">
@@ -51,7 +66,7 @@
 
         <mat-form-field appearance="fill">
             <mat-label>Attribute</mat-label>
-            <mat-select [(value)] = "carta.attribute">
+            <mat-select [(value)]="carta.attribute">
                 <mat-option value="dark">DARK</mat-option>
                 <mat-option value="earth">EARTH</mat-option>
                 <mat-option value="fire">FIRE</mat-option>

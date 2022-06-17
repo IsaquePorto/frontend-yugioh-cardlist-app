@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from  '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
@@ -29,6 +29,10 @@ export class CartaService {
 
   read(): Observable<Carta[]>{
     return this.http.get<Carta[]>(this.baseUrl)
+  }
+
+  read2(pag: number, limit: number): Observable<any>{
+    return this.http.get<any>(this.baseUrl+"?_page="+pag+"&_limit="+limit, {observe: 'response'})
   }
 
   readEdition(edition: string){

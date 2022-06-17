@@ -33,6 +33,7 @@ import { A11yModule } from '@angular/cdk/a11y';
 import { CartasReadEditionComponent } from './components/cartas/cartas-read-edition/cartas-read-edition.component';
 import { CartasEditionComponent } from './components/cartas/cartas-edition/cartas-edition.component';
 
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { CartasEditionComponent } from './components/cartas/cartas-edition/carta
     MatSelectModule,
     MatSortModule,
     MatTableModule,
-    A11yModule
+    A11yModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

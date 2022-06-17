@@ -1,10 +1,23 @@
-form{
+form {
     display: flex;
     flex-direction: column;
     width: 500px;
 }
 
-button{
+.create {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    background-color: rgb(235, 235, 235);
+}
+
+.imagem {
+    float: left;
+    margin: 20px;
+    width: 50%;
+}
+
+button {
     margin-right: 10px;
     margin-top: 10px;
 }

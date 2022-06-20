@@ -25,7 +25,11 @@
       <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by edition">
         Edition
       </th>
-      <td mat-cell *matCellDef="let carta"> {{carta.edition}} </td>
+      <td mat-cell *matCellDef="let carta">
+        <button mat-button (click)="clickEdition(carta.edition)">
+          {{carta.edition.toUpperCase()}}
+        </button>
+      </td>
     </ng-container>
 
     <!-- Card-type Column -->
@@ -50,15 +54,30 @@
       <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by attribute">
         Attribute
       </th>
-      <td mat-cell *matCellDef="let carta"> {{carta.attribute}} </td>
+      <td mat-cell *matCellDef="let carta"> {{carta.attribute.toUpperCase()}} </td>
+    </ng-container>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by attribute">
+        Actions
+      </th>
+      <td mat-cell *matCellDef="let carta">
+        <button mat-icon-button title="Add to my deck" color="primary" (click)="postDeck(carta)">
+          <mat-icon>add</mat-icon>
+        </button>
+        <button mat-icon-button title="Delete from database" color="warn" (click)="openDialog(carta)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-  <mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="pageEvent = $event; mudarPagina();"
-    aria-label="Select page">
+  <mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+    (page)="pageEvent = $event; mudarPagina();" aria-label="Select page">
   </mat-paginator>
 
 </mat-card>

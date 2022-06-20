@@ -15,7 +15,7 @@
 #nav {
     position: relative;
     display: table;
-    float: left;
+    display: inline-block;
     width: 100%;
 }
 

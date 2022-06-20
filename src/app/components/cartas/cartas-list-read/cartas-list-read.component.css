@@ -11,3 +11,12 @@ th.mat-sort-header-sorted {
   height: 100px;
   width: 68px;
 }
+
+.mat-button{
+  padding: 0 6px;
+  min-width: 20px;
+}
+
+i.delete{
+  color: #da3c4c;
+}

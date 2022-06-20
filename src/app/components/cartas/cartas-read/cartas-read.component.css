@@ -21,3 +21,8 @@ mat-card-header {
     width: 100%;
     flex-wrap: wrap;
 }
+
+.addCard{
+    display: flex;
+    margin-left: 30px;
+}

@@ -1,0 +1,53 @@
+<h1 class="title">MY DECK</h1>
+
+<div class="ctnFlex">
+
+    <mat-card class="images mat-elevation-z6">
+        <ul class="images-content">
+            <li *ngFor="let carta of cartasDeck" class="item">
+                <img [src]="carta.imageLink" alt="Card image" height="180" width="124">
+            </li>
+        </ul>
+    </mat-card>
+
+    <div class="tabela">
+        <table mat-table [dataSource]="cartasDeck" class="mat-elevation-z6">
+
+            <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let carta"> {{carta.name}} </td>
+            </ng-container>
+
+            <!-- Name Column 
+        <ng-container matColumnDef="type">
+          <th mat-header-cell *matHeaderCellDef> Type </th>
+          <td mat-cell *matCellDef="let carta"> {{carta.type}} </td>
+        </ng-container>
+      -->
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="attribute">
+                <th mat-header-cell *matHeaderCellDef> Attribute </th>
+                <td mat-cell *matCellDef="let carta"> {{carta.attribute}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef> Actions </th>
+                <td mat-cell *matCellDef="let carta">
+                    <button mat-icon-button color="warn" title="Delete from deck" (click)="openDialog(carta)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+</div>

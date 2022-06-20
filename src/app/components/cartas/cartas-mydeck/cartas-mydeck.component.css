@@ -1,0 +1,44 @@
+.title {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.ctnFlex{
+    display: flex;
+}
+
+table{
+    width: 100%;
+}
+
+.tabela {
+    margin: 20px;
+    width: 40%;
+    float: right;
+}
+
+.images {
+    margin: 20px;
+    width: 60%;
+    min-width: 60%;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.item{
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.images-content{
+    list-style: none;
+    padding-inline-start: 0px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+i.delete{
+    color: #da3c4c;
+    margin-left: 10px;
+  }

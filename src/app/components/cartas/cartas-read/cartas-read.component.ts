@@ -14,7 +14,6 @@ export class CartasReadComponent implements OnInit{
 
   constructor(private cartaService: CartaService) { }
   
-
    // MatPaginator Inputs
    length: number;
    pageSize = 40;
@@ -24,7 +23,7 @@ export class CartasReadComponent implements OnInit{
    pageEvent: PageEvent;
 
    mudarPagina(){
-    this.cartaService.read2(this.pageEvent.pageIndex + 1, this.pageEvent.pageSize).subscribe(cartas => {
+    this.cartaService.read(this.pageEvent.pageIndex + 1, this.pageEvent.pageSize).subscribe(cartas => {
       this.cartas = cartas.body
     })
     window.scrollTo(0, 0);
@@ -37,17 +36,10 @@ export class CartasReadComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.cartaService.read2(1, this.pageSize).subscribe(cartas => {
+    this.cartaService.read(1, this.pageSize).subscribe(cartas => {
       this.cartas = cartas.body
       this.length = cartas.headers.get('X-Total-Count')
     })
   }
-
-  /*
-  ngOnInit(): void {
-    this.cartaService.read().subscribe(cartas => { 
-      this.cartas = cartas
-    })
-  */
 
 }
